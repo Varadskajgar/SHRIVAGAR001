@@ -1,18 +1,25 @@
 {
-  "name": "nodejs",
+  "name": "shrivagar001",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord bot for SHRIVAGAR001 project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Varadskajgar",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^22.13.11",
     "discord.js": "^14.24.2",
     "dotenv": "^17.2.3",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.x"
   }
 }
