@@ -26,11 +26,11 @@ client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
 
   client.user.setPresence({
-    activities: [{ name: "Esport Camp", type: 3 }], // WATCHING = 3
+    activities: [{ name: "Esport Camp", type: 3 }], // WATCHING
     status: "dnd", // online, idle, dnd, invisible
   });
 
-  console.log("👀 Status set to Watching: Esport Camp");
+  console.log("👀 Status set to Watching Esport Camp with DND");
 });
 
 const PREFIX = process.env.PREFIX || "!";
