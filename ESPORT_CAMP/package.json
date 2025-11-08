@@ -4,7 +4,7 @@
   "description": "Discord bot for SHRIVAGAR001 project",
   "main": "index.js",
   "scripts": {
-    "start": "node Esport_Camp/index.js",
+    "start": "node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
