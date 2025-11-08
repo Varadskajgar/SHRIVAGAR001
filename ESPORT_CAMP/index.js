@@ -30,7 +30,7 @@ client.once("ready", () => {
     status: "dnd", // online, idle, dnd, invisible
   });
 
-  console.log("👀 Status set to Watching Esport Camp with DND");
+  console.log("👀 Status set to Watching Managing Esport Camp 😮‍💨 with DND");
 });
 
 const PREFIX = process.env.PREFIX || "!";
