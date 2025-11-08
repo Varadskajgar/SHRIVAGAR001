@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, GatewayIntentBits, Collection } = require("discord.js");
+const { Client, GatewayIntentBits, Collection, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
 
@@ -24,9 +24,9 @@ for (const file of commandFiles) {
 client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
 
-  // Set bot status to "Playing Tournament"
-  client.user.setActivity("Tournament", { type: "MANAGING" })
-    .then(() => console.log("🎮 Status set to MANAGING: ESPORT CAMP"))
+  // Set bot status to "Watching Esport Camp"
+  client.user.setActivity("Esport Camp", { type: "WATCHING" })
+    .then(() => console.log("👀 Status set to Watching: Esport Camp"))
     .catch(console.error);
 });
 
@@ -46,6 +46,23 @@ client.on("messageCreate", async (message) => {
   } catch (error) {
     console.error(error);
     message.reply("⚠️ Error executing that command.");
+  }
+});
+
+// Invite button command
+client.on("messageCreate", async (message) => {
+  if (message.content.toLowerCase() === `${PREFIX}invite`) {
+    const row = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setLabel("Invite Me")
+        .setStyle(ButtonStyle.Link)
+        .setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
+    );
+
+    await message.channel.send({
+      content: "Click the button below to invite me to your server! 🎉",
+      components: [row],
+    });
   }
 });
 
