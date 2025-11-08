@@ -23,6 +23,11 @@ for (const file of commandFiles) {
 
 client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
+
+  // Set bot status to "Playing Tournament"
+  client.user.setActivity("Tournament", { type: "MANAGING" })
+    .then(() => console.log("🎮 Status set to MANAGING: ESPORT CAMP"))
+    .catch(console.error);
 });
 
 const PREFIX = process.env.PREFIX || "!";
