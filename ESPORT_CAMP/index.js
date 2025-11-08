@@ -8,6 +8,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildPresences,
   ],
 });
 
@@ -24,13 +25,12 @@ for (const file of commandFiles) {
 client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
 
-  // Set bot status to "Watching Esport Camp"
-  try {
-    client.user.setActivity("Esport Camp", { type: "WATCHING" });
-    console.log("👀 Status set to Watching: Esport Camp");
-  } catch (error) {
-    console.error(error);
-  }
+  client.user.setPresence({
+    activities: [{ name: "Esport Camp", type: 3 }], // WATCHING = 3
+    status: "dnd", // online, idle, dnd, invisible
+  });
+
+  console.log("👀 Status set to Watching: Esport Camp");
 });
 
 const PREFIX = process.env.PREFIX || "!";
