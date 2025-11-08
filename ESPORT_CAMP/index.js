@@ -25,9 +25,12 @@ client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user.tag}`);
 
   // Set bot status to "Watching Esport Camp"
-  client.user.setActivity("Esport Camp", { type: "WATCHING" })
-    .then(() => console.log("👀 Status set to Watching: Esport Camp"))
-    .catch(console.error);
+  try {
+    client.user.setActivity("Esport Camp", { type: "WATCHING" });
+    console.log("👀 Status set to Watching: Esport Camp");
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 const PREFIX = process.env.PREFIX || "!";
