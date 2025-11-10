@@ -106,16 +106,16 @@ module.exports = {
       const tournamentText = `# Free Fire Tournament
 
 <:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462>
-<a:dot:1435228089478025329> **Date: ${formattedDate}**
+<a:pointer:1436712394553294879> **Date: ${formattedDate}**
 <a:pointer:1436712394553294879> **Time: ${rawTime}**
-<a:dot:1435228089478025329> **Mode: ${modeText}**
+<a:pointer:1436712394553294879> **Mode: ${modeText}**
 <a:pointer:1436712394553294879> **Map: BERMUDA**
 <a:pointer:1436712394553294879> **Entry Fee: ${entryFee}**
-<a:dot:1435228089478025329> **Entry Players: ${players}**
+<a:pointer:1436712394553294879> **Entry Players: ${players}**
 # Winners 
-<:arrow:1436788719880503437> **Top 1: 30₹ + 4₹/Kill**
-<:arrow:1436788719880503437> **Top 2: 20₹ + 4₹/Kill**
-<:arrow:1436788719880503437> **Top 3: 10₹ + 4₹/Kill**
+<a:arrow_animated:1436788701748265206> **Top 1: 30₹ + 4₹/Kill**
+<a:arrow_animated:1436788701748265206> **Top 2: 20₹ + 4₹/Kill**
+<a:arrow_animated:1436788701748265206> **Top 3: 10₹ + 4₹/Kill**
 <:line:1436705708602294282> **Last Zero Kills Player Will Get 1 Chance To Play 4v4 CS ! Winning Team Will Get 6₹/Player**
 <:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462><:white_line:1435300387551969462>
 **Your tournament ID:** ||${randomID}||
@@ -153,14 +153,14 @@ module.exports = {
 
       // ✅ Reply with summary
       await message.reply(
-        `✅ **Tournament Created**\n` +
-          `📅 **Created Tournament ${tournamentNumber}** on **${formattedDate}**\n\n` +
-          `🏷️ **Tournament ID:** ${randomID}\n` +
-          `🎮 **Mode:** ${modeText}\n` +
-          `👥 **Players:** ${players}\n` +
-          `🕒 **Time:** ${rawTime}\n` +
-          `💰 **Entry Fee:** ${entryFee}\n\n` +
-          `📢 Sent to **${sentCount} channel(s)** successfully.`
+        `<a:dot:1435228089478025329> **Tournament Created**\n` +
+          `<a:dot:1435228089478025329> **Created Tournament ${tournamentNumber}** on **${formattedDate}**\n\n` +
+          `<a:dot:1435228089478025329> **Tournament ID:** ${randomID}\n` +
+          `<a:dot:1435228089478025329> **Mode:** ${modeText}\n` +
+          `<a:dot:1435228089478025329> **Players:** ${players}\n` +
+          `<a:dot:1435228089478025329> **Time:** ${rawTime}\n` +
+          `<a:dot:1435228089478025329> **Entry Fee:** ${entryFee}\n\n` +
+          `<a:dot:1435228089478025329> Sent to **${sentCount} channel(s)** successfully.`
       );
     } catch (err) {
       console.error("❌ Error executing create_tournament:", err);
@@ -168,3 +168,4 @@ module.exports = {
     }
   },
 };
+        
