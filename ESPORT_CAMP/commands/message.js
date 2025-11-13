@@ -4,19 +4,17 @@ module.exports = {
   name: "sendm",
   description: "Send a custom message to a specified channel",
   async execute(message, args) {
-    // Check permission
     if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
       return message.reply("❌ You don’t have permission to use this command.");
     }
 
-    // Get mentioned channel
     const channel = message.mentions.channels.first();
     if (!channel) {
       return message.reply("⚠️ Please mention a valid channel.\nExample: `!sendm #general`");
     }
 
-    // 📝 Your custom message (edit this text)
-    const customMessage = "# <a:heart1:1436704986938478593> Esport Camp 
+    // ✅ Use backticks for multiline and emojis safely
+    const customMessage = `# <a:heart1:1436704986938478593> Esport Camp 
 -# ~~                                                                                               ~~
 ## <a:hashtag:1438235816072708228> FF Rush Hrs.
 <a:pointer:1436712394553294879> **Date: 13 November**
@@ -38,7 +36,8 @@ module.exports = {
 <a:red_dot:1438237661478391849> **Host decision final**
 -# ~~                                                                                               ~~
                              <a:purple:1428968760425054299>  **[Join Now](https://docs.google.com/forms/d/e/1FAIpQLSdCLCptnrhCy9Qzvl3sUYhZ5ZMhMvVlCxyxUGVG65_J2Wgorg/viewform?usp=publish-editor)**
--# ~~                                                                                               ~~";
+-# ~~                                                                                               ~~
+`;
 
     try {
       await channel.send(customMessage);
