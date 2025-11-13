@@ -49,7 +49,7 @@ module.exports = {
 <a:red_dot:1438237661478391849> **No join = No reward**
 <a:red_dot:1438237661478391849> **Host decision final**
 -# ~~                                                                                               ~~
-                             <a:purple:1428968760425054299>  **[Join Now](https://docs.google.com/forms/d/e/1FAIpQLSdCLCptnrhCy9Qzvl3sUYhZ5ZMhMvVlCxyxUGVG65_J2Wgorg/viewform?usp=publish-editor)**
+                             <a:purple:1438345613816107121>  **[Join Now](https://docs.google.com/forms/d/e/1FAIpQLSdCLCptnrhCy9Qzvl3sUYhZ5ZMhMvVlCxyxUGVG65_J2Wgorg/viewform?usp=publish-editor)**
 -# ~~                                                                                               ~~`
 
       // 🪟 Create the container
